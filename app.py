@@ -3,8 +3,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-@app.route('/prasad')
-def prasad():
+@app.route('/')
+def home():
 
     return jsonify({
         "message":"Welcome To Prasad API",
@@ -12,7 +12,7 @@ def prasad():
         "time":str(datetime.now())
     })
 
-@app.route('/prasad/health')
+@app.route('/health')
 def health():
 
     return jsonify({
